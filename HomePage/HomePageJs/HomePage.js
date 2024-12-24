@@ -1,7 +1,7 @@
 // 自动锁屏
 (function ($) {
     class ResourceManager {
-        constructor(lockTime = 300000, loadTime = 200000) {
+        constructor(lockTime = 300000, loadTime = 300100) {
             this.lockTime = lockTime;
             this.loadTime = loadTime;
             this.inactivityTimeout;
@@ -31,7 +31,7 @@
                     resolve();
                     return;
                 }
-                $('head').append($('<script>', {
+                $('body').append($('<script>', {
                     src: src,
                     onload: resolve,
                     onerror: reject
