@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./HomePage/HomePageImage/R.jpg.ico">
+    <script src="./HomePage/HomePageJs/jquery.min.js"></script>
+    <script src="./HomePage/HomePageJs/live2d.min.js"></script>
+    <!-- 主页样式 -->
+    <link rel="stylesheet" href="./HomePage/HomePageCss/HomePage.css">
+    <!-- 主页背景样式 -->
+    <link rel="stylesheet" href="./HomePage/HomePageCss/bg.css">
+    <!-- 音乐播放器 -->
+    <link rel="stylesheet" href="./HomePage/HomePageCss/clock.css">
+    <title>个人网站</title>
+    <style>
+        /* 定义一个容器来容纳视频 */
+        .video-container {
+            position: fixed;
+            width: 100%;
+            /* 宽度为100%，以适应父元素宽度 */
+            padding-bottom: 56.25%;
+            /* 16:9比例的填充底部百分比 */
+            height: 0;
+            /* 高度为0，由padding-bottom撑开 */
+        }
+
+        .AutomaticLockingScreen-source {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            object-fit: cover;
+            /* 保持长宽比，覆盖整个容器 */
+        }
+
+        .clock {
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 音乐播放器 -->
+    <div class="video_exist play_yinfu" id="audio_btn" style="z-index:999999;">
+        <div id="yinfu" class="rotate"></div>
+        <audio autoplay="autoplay" id="media" src="./HomePage/mp3/1.mp3" loop="loop">
+        </audio>
+    </div>
+    <!-- 自动锁屏 -->
+    <div class="AutomaticLockingScreen">
+        <ul class="clock" id="helang-clock">
+            <hr>
+        </ul>
+        <!-- 背景 -->
+        <div class="video-container">
+            <video class="AutomaticLockingScreen-source" autoplay loop id="video" muted>
+                <source src="./clock/453a96daecda927a7cb7b284d7ae5e60_preview.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div class="box snowy">
+        <!-- 主页背景 -->
+        <div>
+            <!-- 玻璃球 -->
+            <div class="glass-ball rotates"></div>
+            <!-- 顶光 -->
+            <div class="top-light"></div>
+        </div>
+        <!-- 提示 -->
+        <!-- <div class="tips">
+            <div class="tips-middle middle">
+                <div class="hover hover_p">
+                    <b>X</b>
+                </div>
+                <div class="middle" style="color: rgb(234, 136, 247);">
+                    <b>点击右上角播放音乐</b>
+                </div>
+                <div class="hover hover-p">
+                    <b>确定</b>
+                </div>
+            </div>
+         </div> -->
+        <!-- 导航栏 -->
+        <div class="navbar-top">
+            <div class="navbar">
+                <!-- 左导航栏 -->
+                <ul class="navbar-left">
+                    <li class="mavbar-btn">
+                        <div>sofpn</div>
+                    </li>
+                    <li>
+                        <div>sdslf</div>
+                    </li>
+                </ul>
+                <!-- 右导航栏 -->
+                <ul class="navbar-right">
+                    <li class="mavbar-btn">
+                        <div>sofpn</div>
+                    </li>
+                    <li>
+                        <div>sdslf</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./HomePage/HomePageJs/three.canvas.js"></script>
+<script src="./HomePage/HomePageJs/snowy.js"></script>
+<script src="./HomePage/HomePageJs/HomePage.js"></script>

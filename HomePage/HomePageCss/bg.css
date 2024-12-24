@@ -1,0 +1,73 @@
+body{
+    overflow: hidden;
+}
+.box{
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1920px;
+    background-color: #000;
+    background-image: url('../HomePageImage/bg.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.top-light {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    z-index: 100;
+    display: block;
+    position: absolute;
+    max-width: 100vw;
+    max-height: 100vh;
+    background-image: url('../HomePageImage/light.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+}
+@media screen and (orientation:portrait) {
+    .container {
+        width: 90vw;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    .container {
+        width: 90vh;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .container {
+        width: 90%;
+    }
+}
+@media screen and (min-width:768px) {
+    .glass-ball {
+        left: 0;
+        top: -15%;
+        width: 100%;
+        height: 130%;
+        z-index: 90;
+        position: absolute;
+        background-image: url('../HomePageImage/glass-ball.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.rotates {
+    animation: rotates 20s infinite linear;
+}
+
+@keyframes rotates {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

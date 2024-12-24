@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.clearfix::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+body,
+html {
+    overflow: hidden;
+    height: 100%;
+    color: white;
+}
+
+.box {
+    width: 100%;
+    /* 提示 */
+    .tips {
+        position: fixed;
+        z-index: 10;
+        width: 1920px;
+        height: 100vh;
+        background-color: rgba(151, 149, 152, 0.58);
+
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+        }
+
+        .tips-middle {
+            width: 400px;
+            height: 240px;
+            background-color: white;
+
+            div {
+                left: 50%;
+                font-size: 20px;
+                color: #555;
+            }
+
+            .hover_p {
+                float: right;
+                padding-right: 10px;
+            }
+
+            .hover-p {
+                float: right;
+                font-size: 15px;
+                margin-top: 210px;
+
+                b {
+                    padding: 10px;
+                }
+            }
+
+            .hover:hover {
+                color: red;
+            }
+        }
+    }
+
+    /* 导航栏 */
+    .navbar-top {
+        position: fixed;
+        height: 35px;
+        width: 100%;
+        background-color: #3333;
+
+        .navbar {
+            height: 36px;
+            line-height: 36px;
+            width: 1500px !important;
+            margin: auto;
+            background-color: red;
+
+            /* 左边 */
+            .navbar-left {
+                float: left;
+                background-color: rgb(111, 111, 218);
+
+                .navbar-btn {
+                    position: relative;
+                    z-index: 20;
+                }
+            }
+
+            /* 右边 */
+            .navbar-right {
+                float: right;
+                background-color: yellow;
+            }
+
+            li {
+                float: left;
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+        }
+
+        /* 清除浮动 */
+        .navbar::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    }
+}
