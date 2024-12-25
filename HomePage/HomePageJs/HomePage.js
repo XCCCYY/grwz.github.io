@@ -1,7 +1,7 @@
 // 自动锁屏
 (function ($) {
     class ResourceManager {
-        constructor(lockTime = 300000, loadTime = 300100) {
+        constructor(lockTime = 300000, loadTime = 302000) {
             this.lockTime = lockTime;
             this.loadTime = loadTime;
             this.inactivityTimeout;
@@ -102,7 +102,7 @@
                 this.loadResources([
                     { type: 'js', path: 'clock/clock.js' },
                     { type: 'js', path: 'clock/clock(1).js' },
-                    { type: 'css', path: 'clock/clock.css' }
+                    { type: 'css', path: 'clock/clock.css' },
                 ]);
             }, this.loadTime);
         }
@@ -167,3 +167,10 @@ $(function() {
         });
     }
 });
+// 个人中心
+// $('#IndividualCenter').remove();
+// $(function(){
+//     $('#Individual-Center').click(function(){
+//         $('#IndividualCenter').appendTo();
+//     })
+// })
